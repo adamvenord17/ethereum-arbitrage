@@ -50,7 +50,6 @@ It is possible to fill the individual orders inside of an orderbook by using fla
 
 [Radar Relay](http://classic.relay.radar.tech/) is one example of DEX that uses the classic order book that one would see on a centralized exchange like Coinbase.
 
-![USDC/WETH pair onRadar Relay's orderbook](radar-relay.png)
 
 The example above shows multiple WETH maker orders that could be filled for only a few thousand dollars worth of USDC, using a flashloan.
 
@@ -132,11 +131,7 @@ The result is 390 (DAI for 1 WETH). Next, we check whether we could sell the WET
 
 > 1inch offers the best rates by discovering the most efficient swapping routes across all leading DEXes.
 
-![shows DAI amount returned for 0.02 WETH and the list of supported DEXes](1inch.png)
-
 It may be useful for the reader to know that another popular DEX aggregator exists called [DEX.AG](https://dex.ag/). 1inch is essentially a smart contract that can be queried in various ways, the easiest way to do so is via the UI as shown in the picture above, however the same exact thing can be achieved by queryng the smart contract directly [on Etherscan](https://etherscan.io/address/0xc586bef4a0992c495cf22e1aeee4e446cecdee0e#readContract).
-
-![Shows the best deal available expressed in taker asset quantity in return for the specified maker asset amount](etherscan.png)
 
 The above function was filled in with the WETH and DAI contract addresses and the taker asset amount, i.e. 0.2 WETH as shown in the example order from 0x. The idea is that if this amount is greater than the one returned by 0x, then there is a profitable arbitrage opportunity. We can use the command line again to determine profitability.
 
